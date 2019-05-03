@@ -1,3 +1,5 @@
+
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -181,7 +183,7 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
-  
+  divCol.tabIndex="3";
   divCol.append(li)
 
   return  divCol
