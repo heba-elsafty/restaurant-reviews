@@ -11,21 +11,66 @@ self.addEventListener("install", function(event) {
     return cache.addAll([
       'index.html',
       'restaurant.html',
+      
       '/css/main.css',
       '/css/responsive.css',
+      
+      '/data/restaurants.json',
+      
       '/js/dbhelper.js',
       '/js/main.js',
       '/js/restaurant_info.js',
+      
       '/img/1.jpg',
-    '/img/2.jpg',
-    '/img/3.jpg',
-    '/img/4.jpg',
-    '/img/5.jpg',
-    '/img/6.jpg',
-    '/img/7.jpg',
-    '/img/8.jpg',
-    '/img/9.jpg',
-    '/img/10.jpg',
+      '/img/1_320.jpg',
+      '/img/1_503.jpg',
+      '/img/1_900.jpg',
+      
+      '/img/2.jpg',
+      '/img/2_320.jpg',
+      '/img/2_503.jpg',
+      '/img/2_900.jpg',
+      
+      '/img/3.jpg',
+      '/img/3_320.jpg',
+      '/img/3_503.jpg',
+      '/img/3_900.jpg',
+      
+      '/img/4.jpg',
+      '/img/4_320.jpg',
+      '/img/4_503.jpg',
+      '/img/4_900.jpg',
+      
+      '/img/5.jpg',
+      '/img/5_320.jpg',
+      '/img/5_503.jpg',
+      '/img/5_900.jpg',
+      
+      '/img/6.jpg',
+      '/img/6_320.jpg',
+      '/img/6_503.jpg',
+      '/img/6_900.jpg',
+      
+      '/img/7.jpg',
+      '/img/7_320.jpg',
+      '/img/7_503.jpg',
+      '/img/7_900.jpg',
+      
+      '/img/8.jpg',
+      '/img/8_320.jpg',
+      '/img/8_503.jpg',
+      '/img/8_900.jpg',
+      
+      '/img/9.jpg',
+      '/img/9_320.jpg',
+      '/img/9_503.jpg',
+      '/img/9_900.jpg',
+      
+      '/img/10.jpg',
+      '/img/10_320.jpg',
+      '/img/10_503.jpg',
+      '/img/10_900.jpg',
+      
       '/js/register.js',
     ])
     .catch(error => {
@@ -40,7 +85,7 @@ self.addEventListener('activate', function(event) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
           return cacheName.startsWith('mws-restaurant-') &&
-                 cacheName != staticCacheName;
+                cacheName != staticCacheName;
         }).map(function(cacheName) {
           return caches.delete(cacheName);
         })
@@ -92,7 +137,3 @@ function(event)
 
 }
 );
-
-
-
- 
